@@ -135,7 +135,7 @@ export default function Portfolio() {
   const skills = {
     "Frontend": ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js","Redux","TypeScript", "Responsive Design", "UI/UX Design(Figma)", "Tailwind CSS", "Bootstrap"],
     "Backend & Database": ["MySQL", "MongoDB", "REST APIs", "Database Design"],
-    "Tools & Technologies": ["Git", "GitHub", "VS Code", "Chrome DevTools", "npm", "LucidChart"],
+    "Tools & Technologies": ["Git", "GitHub", "VS Code", "Chrome DevTools", "npm", "Vite"],
     "Core Competencies": ["Problem Solving", "Team Collaboration", "Agile Development", "Code Review"]
   };
 
