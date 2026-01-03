@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Briefcase, Code, Database, ArrowRight, Sparkles } from 'lucide-react';
 
+
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
@@ -301,7 +302,7 @@ export default function Portfolio() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
                 <div className="relative">
                   <img 
-                    src="../public/Omer_photo.jpg" 
+                    src="my-portfolio-new/public/images/Omer_photo.jpg" 
                     alt="Omer Tanveer"
                     className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-2xl transform group-hover:scale-105 transition-transform duration-300"
                   />
