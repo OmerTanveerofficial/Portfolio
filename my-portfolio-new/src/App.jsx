@@ -566,50 +566,74 @@ export default function Portfolio() {
               Let's Connect
             </h2>
             <p className="text-xl text-gray-600">
-              Open to MSc opportunities in Germany and collaborations. Feel free to reach out!
+              Open to new opportunities and collaborations. Feel free to reach out!
             </p>
           </div>
 
-          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200 shadow-xl">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.target;
+              const name = form.elements.name.value;
+              const email = form.elements.email.value;
+              const subject = form.elements.subject.value;
+              const message = form.elements.message.value;
+              const body = `Hi Omer,%0D%0A%0D%0A${encodeURIComponent(message)}%0D%0A%0D%0AFrom: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}`;
+              window.open(`mailto:omertanveer135@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`, '_self');
+            }}
+            className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-200 shadow-xl"
+          >
             <div className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
                   <input
+                    name="name"
                     type="text"
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-colors"
+                    placeholder="Your name"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
                   <input
+                    name="email"
                     type="email"
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-colors"
+                    placeholder="you@example.com"
                   />
                 </div>
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
                 <input
+                  name="subject"
                   type="text"
+                  required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-colors"
+                  placeholder="What's this about?"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                 <textarea
+                  name="message"
                   rows="5"
+                  required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-colors resize-none"
+                  placeholder="Your message..."
                 ></textarea>
               </div>
               <button
-                onClick={(e) => e.preventDefault()}
+                type="submit"
                 className="w-full bg-gradient-to-r from-emerald-600 to-blue-600 text-white py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-emerald-200 hover:scale-[1.02] transition-all duration-300"
               >
                 Send Message
               </button>
             </div>
-          </div>
+          </form>
 
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-4">Connect with me:</p>
