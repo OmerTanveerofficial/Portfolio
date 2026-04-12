@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Briefcase, Code, Database, ArrowRight, Sparkles, Globe, Brain, Eye, Activity, Terminal, Layers } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Briefcase, Code, Database, ArrowRight, Sparkles, Globe, Brain, Eye, Activity, Terminal, Layers, Truck, BarChart3 } from 'lucide-react';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
@@ -65,6 +65,28 @@ export default function Portfolio() {
   ];
 
   const projects = [
+    {
+      title: "FastSupply",
+      subtitle: "Courier Delivery Platform",
+      description: "Full-stack MERN courier delivery platform connecting customers with verified drivers. Features JWT auth, OTP password reset, dynamic fare offers, real-time chat, driver verification workflow, complaint system, and a TCS-style public landing page. Supports 3 roles: Customer, Driver, and Admin.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "Mongoose"],
+      github: "https://github.com/OmerTanveerofficial/FastSupply-OmerTanveer",
+      live: "https://fastsupply-omertanveer.vercel.app",
+      gradient: "from-teal-400 to-orange-500",
+      icon: <Truck size={24} />,
+      featured: true
+    },
+    {
+      title: "WorkPulse",
+      subtitle: "Task Management Portal",
+      description: "MERN-stack task management platform with role-based access for Workers, Managers, and Company Admins. Features Kanban board, priority system, team analytics, real-time notifications, and completed-by tracking.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      github: "https://github.com/OmerTanveerofficial/WorkPulse-OmerTanveer",
+      live: "https://workpulse-portal.vercel.app",
+      gradient: "from-slate-500 to-zinc-700",
+      icon: <BarChart3 size={24} />,
+      featured: true
+    },
     {
       title: "VitalSense",
       subtitle: "Contactless Health Monitor",
